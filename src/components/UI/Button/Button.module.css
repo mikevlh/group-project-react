@@ -1,0 +1,20 @@
+
+.button {
+  margin-top: 30px;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(-45deg, #d4e8dc, #3f5843, #d4e8dc);
+  background-size: 300%;
+  background-position: 90% 0;
+  transition: 0.8s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-position: 185% 50%;
+}
+
+.button:focus {
+  outline: none;
+}

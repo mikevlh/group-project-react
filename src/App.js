@@ -1,13 +1,22 @@
+import React from "react";
+
 import "./App.css";
 
-import FlightsTableComponent from "./components/flightComponents/Flights";
+import { cardsData } from "./components/UI/ExpandingCards/ExpandingData";
+import ExpandingCards from "./components/UI/ExpandingCards/ExpandingCards";
+import ClientDetails from "./components/ClientDetails/ClientDetails";
+
+import Popup from "./components/Header/PopUpSignUpForm";
+
 
 function App() {
+
   return (
     <div className="App">
-      <h1>Hello World</h1>
-
-      <FlightsTableComponent />
+      <header className="App-header">
+        <Popup />
+        <ExpandingCards data={cardsData} />
+      </header>
     </div>
   );
 }

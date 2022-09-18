@@ -1,0 +1,62 @@
+.sign-up-button {
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  margin-right: 15px;
+  border: 2px solid #3f5843;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.modal {
+  background-color: white;
+  align-self: center;
+  font-size: 12px;
+  position: relative;
+  border: 2px solid #3f5843;
+  border-radius: 5px;
+  padding: 50px 50px;
+  margin: 25px 50px;
+}
+
+.modal > .header {
+  color: #3f5843;
+  position: relative;
+  height: 20%;
+  width: 100%;
+  border-bottom: 1px solid #3f5843;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.modal > .content {
+  position: relative;
+  float: center;
+  padding: 10px 5px;
+  color: black;
+}
+
+.modal > .actions {
+  width: 100%;
+  padding: 10px 5px;
+  margin: auto;
+  text-align: center;
+  color: #3f5843;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #3f5843;
+}

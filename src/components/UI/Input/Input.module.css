@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+.control {
+    margin: 1rem 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.control label,
+.control input {
+    display: block;
+}
+
+.control label {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    flex: 1;
+    color: #3f5843;
+    margin-bottom: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.control input {
+    flex: 3;
+    font: inherit;
+    padding-left: 0.5rem;
+    padding: 0.35rem 0.35rem;
+    border-radius: 6px;
+    border: 1px solid #3f5843;
+}
+
+.control input:focus {
+    outline: none;
+    border-color: #4f005f;
+    background: #f6dbfc;
+}
+
+.control.invalid input {
+    border-color: red;
+    background: #fbdada;
+}
+
+@media (min-width: 768px) {
+    .control {
+        align-items: center;
+        flex-direction: row;
+    }
+}
