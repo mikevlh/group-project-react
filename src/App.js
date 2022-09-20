@@ -8,6 +8,7 @@ import ClientDetails from "./components/ClientDetails/ClientDetails";
 import AirplaneComponent from "./components/Airplane/AirplaneComponent";
 
 import Popup from "./components/Header/PopUpSignUpForm";
+import PilotComponent from "./components/Pilot/PilotComponent";
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
       <header className="App-header">
         <Popup />
         <ExpandingCards data={cardsData} />
-        {/* <AirplaneComponent /> */}
+         <AirplaneComponent />
+          <PilotComponent />
       </header>
     </div>
   );
