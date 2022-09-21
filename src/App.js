@@ -10,6 +10,7 @@ import AirportFlightComponent from "./components/AirportFlight/AirportFlightComp
 
 import Popup from "./components/Header/PopUpSignUpForm";
 import PilotComponent from "./components/Pilot/PilotComponent";
+import PilotForm from "./components/Pilot/PilotForm";
 
 
 function App() {
@@ -17,11 +18,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Popup />
-        <ExpandingCards data={cardsData} />
-         {/* <AirplaneComponent />
-          <PilotComponent /> */}
-          {/* <AirportFlightComponent /> */}
+        {/*<Popup />*/}
+        {/*<ExpandingCards data={cardsData} />*/}
+        {/*  <AirplaneComponent />*/}
+          <PilotForm />
+          <PilotComponent />
+           {/*<AirportFlightComponent />*/}
       </header>
     </div>
   );
