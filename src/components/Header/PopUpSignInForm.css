@@ -1,4 +1,4 @@
-.sign-up-button {
+.sign-in-button {
   float: right;
   position: relative;
   margin-right: 0;
@@ -7,18 +7,18 @@
   padding: 8px;
 }
 
-.modal {
+.modal1 {
   background-color: white;
   align-self: center;
   font-size: 12px;
   position: relative;
   border: 2px solid #3f5843;
   border-radius: 5px;
-  padding: 25px 50px;
+  padding: 50px 50px;
   margin: 25px 50px;
 }
 
-.modal > .header {
+.modal1 > .header1 {
   color: #3f5843;
   position: relative;
   height: 20%;
@@ -28,14 +28,14 @@
   padding: 5px;
 }
 
-.modal > .content {
+.modal1 > .content1 {
   position: relative;
   float: center;
   padding: 10px 5px;
   color: black;
 }
 
-.modal > .actions {
+.modal1 > .actions1 {
   width: 100%;
   padding: 10px 5px;
   margin: auto;
@@ -45,7 +45,7 @@
   margin-bottom: 10px;
 }
 
-.modal > .close {
+.modal1 > .close1 {
   cursor: pointer;
   position: absolute;
   display: block;

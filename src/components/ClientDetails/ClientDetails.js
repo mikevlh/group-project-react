@@ -1,6 +1,5 @@
 import React, { useRef, useState, useReducer, useEffect } from "react";
 
-import Card from "../UI/Card/Card";
 import Input from "../UI/Input/Input";
 import {
   nameValidation,
@@ -19,7 +18,7 @@ const firsNameReducer = (state, action) => {
   if (action.type === "INPUT_BLUR") {
     return { value: state.value, isValid: nameValidation.test(state.value) };
   }
-  return { value: "", isValid: false };
+  return { value: "", isValid: false};
 };
 
 const lastNameReducer = (state, action) => {
@@ -203,7 +202,7 @@ const ClientDetails = (props) => {
   };
 
   return (
-    <Card className={classes.client}>
+    <div className={classes.client}>
       <form onSubmit={submitHandler} id="ClientDetails">
         <Input
           ref={firstNameInputRef}
@@ -266,7 +265,7 @@ const ClientDetails = (props) => {
           onBlur={validatePasswordHandler}
         />
       </form>
-    </Card>
+    </div>
   );
 };
 

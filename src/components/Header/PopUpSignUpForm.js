@@ -2,16 +2,15 @@ import React from "react";
 import Popup from "reactjs-popup";
 
 import Button from "../UI/Button/Button";
-import Card from "../UI/Card/Card";
 import ClientDetails from "../ClientDetails/ClientDetails";
 
 import "./PopUpSignUpForm.css";
 import classes from "../ClientDetails/ClientDetails.module.css";
 
 export default (props) => (
-  <Card>
+  
   <Popup
-    trigger={<button className="sign-up-button"> Sign Up Form </button>}
+    trigger={<button className="sign-up-button">Sign Up</button>}
     modal
   >
     {(close) => (
@@ -20,7 +19,7 @@ export default (props) => (
           &times;
         </button>
         <div className="header">Please, fill all the required fields</div>
-        <div className="content">
+        <div>
           <ClientDetails />
         </div>
         <div className="actions">
@@ -34,5 +33,5 @@ export default (props) => (
       </div>
     )}
   </Popup>
-  </Card>
+
 );
