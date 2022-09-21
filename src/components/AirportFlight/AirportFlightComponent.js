@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-export default function HttpPost() {
+export default function HttpPostt() {
   const [airportFlights, setAirportFlights] = useState([]);
   useEffect(() => {
     setAirportFlights();
@@ -82,9 +82,9 @@ export default function HttpPost() {
               {/* {
               this.state.airportFlights.map(airportFlight =>
                 <tr key={airportFlight.airportFlightId}>
-                  <td>{airportFlight.from.country}</td>
-                  <td>{airportFlight.from.city}</td>
-                  <td>{airportFlight.from.airportname}</td>
+                  <td>{airportFlight.from1.country}</td>
+                  <td>{airportFlight.from1.city}</td>
+                  <td>{airportFlight.from1.airportname}</td>
                   <td>{airportFlight.to.country}</td>
                   <td>{airportFlight.to.city}</td>
                   <td>{airportFlight.to.airportname}</td>

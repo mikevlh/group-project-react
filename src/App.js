@@ -18,12 +18,13 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/*<Popup />*/}
-        {/*<ExpandingCards data={cardsData} />*/}
-        {/*  <AirplaneComponent />*/}
-          <PilotForm />
-          <PilotComponent />
-           {/*<AirportFlightComponent />*/}
+        <Popup />
+        <ExpandingCards data={cardsData} />
+        <AirplaneComponent />
+           <PilotForm />
+          <PilotComponent /> 
+          
+           <AirportFlightComponent />
       </header>
     </div>
   );
