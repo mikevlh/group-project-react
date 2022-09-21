@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-export default function HttpPostt() {
+export default function HttpPost() {
   const [airportFlights, setAirportFlights] = useState([]);
   useEffect(() => {
     setAirportFlights();

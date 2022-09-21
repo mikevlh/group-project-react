@@ -7,7 +7,7 @@ import ExpandingCards from "./components/UI/ExpandingCards/ExpandingCards";
 import ClientDetails from "./components/ClientDetails/ClientDetails";
 import AirplaneComponent from "./components/Airplane/AirplaneComponent";
 import AirportFlightComponent from "./components/AirportFlight/AirportFlightComponent";
-
+import CreateAirplaneComponent from "./components/Airplane/CreateAirplaneComponent"
 import Popup from "./components/Header/PopUpSignUpForm";
 import PilotComponent from "./components/Pilot/PilotComponent";
 import PilotForm from "./components/Pilot/PilotForm";
@@ -21,10 +21,11 @@ function App() {
         <Popup />
         <ExpandingCards data={cardsData} />
         <AirplaneComponent />
-           <PilotForm />
-          <PilotComponent /> 
+        <CreateAirplaneComponent />
+           {/* <PilotForm />
+          <PilotComponent />  */}
           
-           <AirportFlightComponent />
+           {/* <AirportFlightComponent /> */}
       </header>
     </div>
   );
