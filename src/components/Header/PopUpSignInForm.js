@@ -18,13 +18,13 @@ export default (props) => (
         <div className="content1">
           <Login />
         </div>
-        <div className="actions1">
+        {/* <div className="actions1">
           <Popup
             trigger={<Button className={classes.btn}>SignIn</Button>}
             position="top center"
             nested
           ></Popup>
-        </div>
+        </div> */}
       </div>
     )}
   </Popup>

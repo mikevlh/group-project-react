@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useReducer, useContext, useRef } from "react";
+import axios from "axios";
 
 import classes from "./Login.module.css";
 
@@ -7,20 +8,20 @@ import AuthContext from "../../store/auth-context";
 
 const emailReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: action.val.includes("@") };
+    return { value: action.val, isValid: action.val.trim().length > 2 };
   }
   if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.includes("@") };
+    return { value: state.value, isValid: state.value.trim().length > 2};
   }
   return { value: "", isValid: false };
 };
 
 const passwordReducer = (state, action) => {
   if (action.type === "USER_INPUT") {
-    return { value: action.val, isValid: action.val.trim().length > 6 };
+    return { value: action.val, isValid: action.val.trim().length > 2 };
   }
   if (action.type === "INPUT_BLUR") {
-    return { value: state.value, isValid: state.value.trim().length > 6 };
+    return { value: state.value, isValid: state.value.trim().length > 2 };
   }
   return { value: "", isValid: false };
 };
@@ -72,10 +73,30 @@ const Login = (props) => {
     dispatchPassword({ type: "INPUT_BLUR" });
   };
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
+//     const loginClient =  {username: emailState.value,
+//       password: passwordState.value 
+// }
+    const username = emailState.value;
+    const password = passwordState.value;
+    // const username = "efi";
+    // const password = "123";
+   
+  try {
+    const res = await axios.post(
+        "http://localhost:8080/auth/loginclient",null, {
+          params: { username, password}
+        });
+         console.log(res.data.data);
+    alert("You logged in succesfully!");
+    
+  } catch (event) {
+    alert(event);
+  }
     if (formIsValid) {
       ctx.onLogin(emailState.value, passwordState.value);
+
     } else if (!emailIsValid) {
       emailInputRef.current.focus();
     } else {
@@ -91,7 +112,7 @@ const Login = (props) => {
           ref={emailInputRef}
           id="email"
           label="EMail:"
-          type="email"
+          type="text"
           isValid={emailIsValid}
           value={emailState.value}
           onChange={emailChangeHandler}
@@ -107,6 +128,9 @@ const Login = (props) => {
           onChange={passwordChangeHandler}
           onBlur={validatePasswordHandler}
         />
+        <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
       </form>
     </div>
   );
