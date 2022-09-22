@@ -2,7 +2,7 @@ import React, { useState, useEffect, useReducer, useContext, useRef } from "reac
 import axios from "axios";
 
 import classes from "./Login.module.css";
-
+import Button from "../UI/Button/Button";
 import Input from "../UI/Input/Input";
 import AuthContext from "../../store/auth-context";
 
@@ -85,7 +85,7 @@ const Login = (props) => {
    
   try {
     const res = await axios.post(
-        "http://localhost:8080/auth/loginclient",null, {
+        "http://localhost:8080/auth/loginadmin",null, {
           params: { username, password}
         });
          console.log(res.data.data);
@@ -128,9 +128,9 @@ const Login = (props) => {
           onChange={passwordChangeHandler}
           onBlur={validatePasswordHandler}
         />
-        <button type="submit" class="btn btn-primary">
+        <Button type="submit">
             Submit
-          </button>
+          </Button>
       </form>
     </div>
   );

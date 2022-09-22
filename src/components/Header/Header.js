@@ -10,8 +10,8 @@ function Header() {
   return (
     <Card>
       <div className="header1" id="content">
-        <PopUpSignInForm />
-        <Popup />
+        {/* <PopUpSignInForm />
+        <Popup /> */}
         <h1>Project X</h1>
       </div>
     </Card>

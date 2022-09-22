@@ -24,7 +24,7 @@ export default (props) => (
         </div>
         <div className="actions">
           <Popup
-            trigger={<Button className={classes.btn}> SignUp </Button>}
+            // trigger={<Button className={classes.btn}> SignUp </Button>}
             position="top center"
             nested
           >
