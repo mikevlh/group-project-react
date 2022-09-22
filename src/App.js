@@ -8,12 +8,15 @@ import BookingForm from "../src/components/Booking/BookingForm";
 import MiddleSection from "../src/components/MiddleSection/MiddleSection";
 import { cardsData } from "./components/UI/ExpandingCards/ExpandingData";
 import ExpandingCards from "./components/UI/ExpandingCards/ExpandingCards";
+import AirportComponent from "./components/Airport/AirportComponent";
 
 // import AirplaneComponent from "./components/Airplane/AirplaneComponent";
 // import AirportFlightComponent from "./components/AirportFlight/AirportFlightComponent";
 // import CreateAirplaneComponent from "./components/Airplane/CreateAirplaneComponent"
-// import PilotComponent from "./components/Pilot/PilotComponent";
-// import PilotForm from "./components/Pilot/PilotForm";
+import PilotComponent from "./components/Pilot/PilotComponent";
+import PilotForm from "./components/Pilot/PilotForm";
+import AirportForm from "./components/Airport/AirportForm"
+import HttpPost from "./components/AirportFlight/AirportFlightComponent";
 
 function App() {
   return (
@@ -22,12 +25,14 @@ function App() {
         <Header />
         <MiddleSection />
         <ExpandingCards data={cardsData} />
-
+        {/*<HttpPost />*/}
         {/* <AirplaneComponent />
         <CreateAirplaneComponent /> */}
-        {/* <PilotForm />
-          <PilotComponent />  */}
-        {/* <AirportFlightComponent /> */}
+         {/*<PilotForm />*/}
+         {/* <PilotComponent />*/}
+         {/*<AirportFlightComponent /> */}
+          <AirportComponent />
+        <AirportForm />
 
         <BookingForm />
         <Footer />
