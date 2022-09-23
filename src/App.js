@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import "./App.css";
 
@@ -25,24 +25,45 @@ import Pilot from "./components/Pilot/Pilot";
 import CreatePilot from "./components/Pilot/CreatePilot";
 import Client from './components/Client/Client.js'
 import Airport from './components/Airport/Airport'
+import LoginAdmin from "./components/Login/LoginAdmin";
 
 
 function App() {
   const ctx = useContext(AuthContext);
+  const [adminFormIsShown, setAdminFormIsShown] = useState(false);
+  const [airplaneFormIsShown, setAirplaneFormIsShown] = useState(false);
+
+  const showAdminFormHandler = () => {
+    setAdminFormIsShown(true);
+  };
+
+  const hideAdminFormHandler = () => {
+    setAdminFormIsShown(false);
+  };
+
+  const showCreateAirplaneHandler = () => {
+    setAirplaneFormIsShown(true);
+  };
+
+  const hideCreateAirplaneHandler = () => {
+    setAirplaneFormIsShown(false);
+  };
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
-        <MiddleSection />
-        <ExpandingCards data={cardsData} />
+        {adminFormIsShown && <LoginAdmin onClose={hideAdminFormHandler} />}
+        <Header onShowAdminForm={showAdminFormHandler}/>
+        {airplaneFormIsShown && <CreateAirplane onClose={hideCreateAirplaneHandler} />}
+        <MiddleSection onshowCreateAirplane={showCreateAirplaneHandler}/>
+        {/* <ExpandingCards data={cardsData} /> */}
         
-        {!ctx.isLoggedIn && <Login />}
-        {ctx.isLoggedIn && <Airplane />}
+        {/* {!ctx.isLoggedIn && <Login />} */}
+        {/* {ctx.isLoggedIn && <Airplane />}
         {ctx.isLoggedIn && <CreateAirplane />}
         {ctx.isLoggedIn && <Pilot />}
         {ctx.isLoggedIn && <CreatePilot />}
         {ctx.isLoggedIn && <Client />}
-        {ctx.isLoggedIn && <Airport />}
+        {ctx.isLoggedIn && <Airport />} */}
         {/*<HttpPost />*/}
         {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
@@ -56,7 +77,7 @@ function App() {
          {/*  <AirportComponent />*/}
         {/*<AirportForm />*/}
 
-        <BookingForm />
+        {/* <BookingForm /> */}
         <Footer />
       </header>
     </div>

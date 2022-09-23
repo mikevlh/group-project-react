@@ -1,0 +1,9 @@
+.sign-in-button {
+    float: right;
+    position: relative;
+    margin-right: 0;
+    border: 2px solid #3f5843;
+    border-radius: 5px;
+    padding: 8px;
+  }
+  

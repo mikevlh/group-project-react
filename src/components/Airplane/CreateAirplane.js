@@ -5,8 +5,9 @@ import Card from "../UI/Card/Card";
 import Input from "../UI/Input/Input";
 import Button from "../UI/Button/Button";
 import AuthContext from "../../store/auth-context";
+import Modal from "../UI/Modal/Modal";
 
-const CreateAirplane = () => {
+const CreateAirplane = (props) => {
     const ctx = useContext(AuthContext);
   const manufactureInputRef = useRef();
   const modelNumberInputRef = useRef();
@@ -54,7 +55,7 @@ const CreateAirplane = () => {
   };
 
   return (
-    <Fragment>
+    <Modal onClose={props.onClose}>
       <Card>
         <form onSubmit={submitHandler}>
           <label htmlFor="manufacture">Manufacture</label>
@@ -79,11 +80,11 @@ const CreateAirplane = () => {
             onChange={capacityChangeHandler}
           />
           <Button type="submit">Create</Button>
-          <Button onClick={ctx.onLogout}>Logout</Button>
+          <Button onClick={props.onClose}>Close</Button>
         </form>
         
       </Card>
-    </Fragment>
+    </Modal>
   );
 };
 
