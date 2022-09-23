@@ -27,7 +27,7 @@ export default function HttpPost() {
 
           <div class="form-group">
             <label for="manufacture">Manufacture</label>
-            <input
+            <Input
                 type="text"
                 class="form-control"
                 name="manufacture"
@@ -36,18 +36,18 @@ export default function HttpPost() {
           </div>
           <div class="form-group">
             <label for="modelNumber">Model Number</label>
-            <input
+            <Input
                 type="text"
                 class="form-control"
                 name="modelNumber"
                 placeholder="Enter the Model Number"
             />
             <label for="capacity">Capacity</label>
-            <input type="number" class="form-control" name="capacity" placeholder="Enter the capacity"/>
+            <Input type="number" class="form-control" name="capacity" placeholder="Enter the capacity"/>
           </div>
-          <button type="submit" class="btn btn-primary">
+          <Button type="submit" >
             Submit
-          </button>
+          </Button>
         </form>
       </div>
   );

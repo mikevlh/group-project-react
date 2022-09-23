@@ -20,6 +20,7 @@ import HttpPost from "./components/AirportFlight/AirportFlightComponent";
 import AuthContext from "./store/auth-context";
 import Airplane from "./components/Airplane/Airplane";
 import Login from "./components/Login/Login";
+import CreateAirplane from "./components/Airplane/CreateAirplane";
 
 function App() {
   const ctx = useContext(AuthContext);
@@ -32,9 +33,10 @@ function App() {
         
         {!ctx.isLoggedIn && <Login />}
         {ctx.isLoggedIn && <Airplane />}
+        {ctx.isLoggedIn && <CreateAirplane />}
         {/*<HttpPost />*/}
-        {/* <AirplaneComponent />
-        <CreateAirplaneComponent /> */}
+        {/* <AirplaneComponent /> */}
+        {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
          {/* <PilotComponent />*/}
          {/*<AirportFlightComponent /> */}
