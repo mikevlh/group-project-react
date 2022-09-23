@@ -2,9 +2,10 @@ import React, { Fragment, useState, useContext, useEffect } from "react";
 import Button from "../UI/Button/Button.js";
 import AuthContext from "../../store/auth-context.js";
 import AirplaneList from "./AirplaneList.js";
+import Modal from "../UI/Modal/Modal.js";
 import axios from "axios";
 
-const Airplane = () => {
+const Airplane = (props) => {
   const ctx = useContext(AuthContext);
   const [airplanes, setAirplanes] = useState([]);
   const url = "http://localhost:8080/airplane/airplanes";
@@ -27,8 +28,8 @@ const Airplane = () => {
   return (
     <Fragment>
       <AirplaneList airplanes={airplanes} />
-      <Button onClick={ctx.onLogout}>Logout</Button>
-    </Fragment>
+      <Button onClick={ctx.onLogout}>Close</Button>
+      </Fragment>
   );
 };
 

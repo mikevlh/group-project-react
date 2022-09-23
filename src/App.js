@@ -34,6 +34,7 @@ function App() {
   const ctx = useContext(AuthContext);
   const [adminFormIsShown, setAdminFormIsShown] = useState(false);
   const [airplaneFormIsShown, setAirplaneFormIsShown] = useState(false);
+  const [airplaneListIsShown, setAirplaneListIsShown] = useState(false);
 
   const showAdminFormHandler = () => {
     setAdminFormIsShown(true);
@@ -43,32 +44,41 @@ function App() {
     setAdminFormIsShown(false);
   };
 
-  const showCreateAirplaneHandler = () => {
+  const showAirplaneFormHandler = () => {
     setAirplaneFormIsShown(true);
   };
 
-  const hideCreateAirplaneHandler = () => {
+  // const showAirplaneListHandler = () => {
+  //   setAirplaneListIsShown(true);
+  // };
+
+  const hideAirplaneFormHandler = () => {
     setAirplaneFormIsShown(false);
   };
+
+  // const hideAirplaneListHandler = () => {
+  //   setAirplaneListIsShown(false);
+  // };
   return (
     <div className="App">
       <header className="App-header">
         {adminFormIsShown && <LoginAdmin onClose={hideAdminFormHandler} />}
         <Header onShowAdminForm={showAdminFormHandler}/>
-        {airplaneFormIsShown && <CreateAirplane onClose={hideCreateAirplaneHandler} />}
-        <MiddleSection onshowCreateAirplane={showCreateAirplaneHandler}/>
+        {/* {airplaneListIsShown && <Airplane onClose={hideAirplaneListHandler} />} */}
+        {airplaneFormIsShown && <CreateAirplane onClose={hideAirplaneFormHandler} />}
+        <MiddleSection onshowCreateAirplane={showAirplaneFormHandler} />
         {/* <ExpandingCards data={cardsData} /> */}
         
         {/* {!ctx.isLoggedIn && <Login />} */}
-        {/* {ctx.isLoggedIn && <Airplane />}
-        {ctx.isLoggedIn && <CreateAirplane />}
+        {ctx.isLoggedIn && <Airplane />}
+        {/* {ctx.isLoggedIn && <CreateAirplane />}
         {ctx.isLoggedIn && <Pilot />}
         {ctx.isLoggedIn && <CreatePilot />}
         {ctx.isLoggedIn && <Client />}
         {ctx.isLoggedIn && <Airport />}
-        {ctx.isLoggedIn && <CreateAirport />}
+        {ctx.isLoggedIn && <CreateAirport />} */}
 
-        {/*<HttpPost />*/}
+        {/*<HttpPost />
         {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
          {/* <PilotComponent />*/}

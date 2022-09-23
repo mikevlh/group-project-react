@@ -1,5 +1,7 @@
 import React from "react";
 import Airplane from "./Airplane";
+import Modal from "../UI/Modal/Modal";
+import Button from "../UI/Button/Button";
 
 const AirplaneList = (props) => {
   const displayAirplanes = (props) => {
