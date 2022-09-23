@@ -10,17 +10,20 @@ import { cardsData } from "./components/UI/ExpandingCards/ExpandingData";
 import ExpandingCards from "./components/UI/ExpandingCards/ExpandingCards";
 import AirportComponent from "./components/Airport/AirportComponent";
 
-// import AirplaneComponent from "./components/Airplane/AirplaneComponent";
 // import AirportFlightComponent from "./components/AirportFlight/AirportFlightComponent";
-// import CreateAirplaneComponent from "./components/Airplane/CreateAirplaneComponent"
 import PilotComponent from "./components/Pilot/PilotComponent";
 import PilotForm from "./components/Pilot/PilotForm";
 import AirportForm from "./components/Airport/AirportForm"
 import HttpPost from "./components/AirportFlight/AirportFlightComponent";
+import ClientComponent from "./components/Client/ClientComponent";
+import ClientForm from "./components/Client/ClientForm";
 import AuthContext from "./store/auth-context";
 import Airplane from "./components/Airplane/Airplane";
 import Login from "./components/Login/Login";
 import CreateAirplane from "./components/Airplane/CreateAirplane";
+import Pilot from "./components/Pilot/Pilot";
+import CreatePilot from "./components/Pilot/CreatePilot";
+
 
 function App() {
   const ctx = useContext(AuthContext);
@@ -34,16 +37,22 @@ function App() {
         {!ctx.isLoggedIn && <Login />}
         {ctx.isLoggedIn && <Airplane />}
         {ctx.isLoggedIn && <CreateAirplane />}
+        {ctx.isLoggedIn && <Pilot />}
+        {ctx.isLoggedIn && <CreatePilot />}
         {/*<HttpPost />*/}
-        {/* <AirplaneComponent /> */}
         {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
          {/* <PilotComponent />*/}
+         {/*<AirportFlightComponent />*/}
+        {/*  <AirportComponent />*/}
+        {/*<AirportForm />*/}
+        {/*<ClientForm />*/}
+        {/*  <ClientComponent />*/}
          {/*<AirportFlightComponent /> */}
-          {/* <AirportComponent />
-        <AirportForm />
+         {/*  <AirportComponent />*/}
+        {/*<AirportForm />*/}
 
-        <BookingForm /> */}
+        <BookingForm />
         <Footer />
       </header>
     </div>
