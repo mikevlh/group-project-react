@@ -26,6 +26,7 @@ import CreatePilot from "./components/Pilot/CreatePilot";
 import Client from './components/Client/Client.js'
 import Airport from './components/Airport/Airport'
 import CreateAirport from './components/Airport/CreateAirport'
+import RegisterClient from './components/Client/RegisterClient.js'
 
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
         <Header />
         <MiddleSection />
         <ExpandingCards data={cardsData} />
-        
+        <RegisterClient />
         {!ctx.isLoggedIn && <Login />}
         {ctx.isLoggedIn && <Airplane />}
         {ctx.isLoggedIn && <CreateAirplane />}
