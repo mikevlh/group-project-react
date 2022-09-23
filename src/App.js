@@ -15,14 +15,15 @@ import PilotComponent from "./components/Pilot/PilotComponent";
 import PilotForm from "./components/Pilot/PilotForm";
 import AirportForm from "./components/Airport/AirportForm"
 import HttpPost from "./components/AirportFlight/AirportFlightComponent";
-import ClientComponent from "./components/Client/ClientComponent";
-import ClientForm from "./components/Client/ClientForm";
+// import ClientComponent from "./components/Client/ClientComponent";
+// import ClientForm from "./components/Client/ClientForm";
 import AuthContext from "./store/auth-context";
 import Airplane from "./components/Airplane/Airplane";
 import Login from "./components/Login/Login";
 import CreateAirplane from "./components/Airplane/CreateAirplane";
 import Pilot from "./components/Pilot/Pilot";
 import CreatePilot from "./components/Pilot/CreatePilot";
+import Client from './components/Client/Client.js'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         {ctx.isLoggedIn && <CreateAirplane />}
         {ctx.isLoggedIn && <Pilot />}
         {ctx.isLoggedIn && <CreatePilot />}
+        {ctx.isLoggedIn && <Client />}
         {/*<HttpPost />*/}
         {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
