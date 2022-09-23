@@ -24,6 +24,7 @@ import CreateAirplane from "./components/Airplane/CreateAirplane";
 import Pilot from "./components/Pilot/Pilot";
 import CreatePilot from "./components/Pilot/CreatePilot";
 import Client from './components/Client/Client.js'
+import Airport from './components/Airport/Airport'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         {ctx.isLoggedIn && <Pilot />}
         {ctx.isLoggedIn && <CreatePilot />}
         {ctx.isLoggedIn && <Client />}
+        {ctx.isLoggedIn && <Airport />}
         {/*<HttpPost />*/}
         {/* {ctx.isLoggedIn && <CreateAirplaneComponent />} */}
          {/*<PilotForm />*/}
